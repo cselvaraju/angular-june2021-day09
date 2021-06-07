@@ -1,0 +1,20 @@
+<div class="container" id="child">
+  <h3>Child Component</h3>
+  <div>
+    Parent Favourite Fruit is: <span id="fruit">{{ favFruitFromParent }}</span>
+  </div>
+  <div>
+    <label>
+      Enter your favourite flower:
+      <input type="text" [(ngModel)]="favFlower">
+      <button (click)="sendDataToParent()">Send data to parent</button>
+    </label>
+  </div>
+  <div>
+    <label>
+      Enter your favourite dish:
+      <input type="text" [(ngModel)]="favDish">
+      <button (click)="sendDataToSibling()">Send data to sibling</button>
+    </label>
+  </div>
+</div>

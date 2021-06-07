@@ -1,0 +1,25 @@
+<div class="container" id="parent">
+  <h3>Parent Component</h3>
+  <div>
+    <label>
+      Enter favourite fruit:
+      <input type="text" [(ngModel)]="favFruit">
+    </label>
+    <button (click)="passData2Child()">
+      Pass data to child
+    </button>
+  </div>
+  <div>
+    Child component's Favourite Flower is <span id="flower">{{ childFavFlower }}</span>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-child
+      [favFruitFromParent]="parentFavFruit"
+      (flowerEvent)="handleFlowerEvent($event)"></app-child>
+    </div>
+    <div class="col">
+      <app-sibling></app-sibling>
+    </div>
+  </div>
+</div>
